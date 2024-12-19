@@ -41,8 +41,24 @@ function Register() {
     };
 
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-            <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+        <div className="relative min-h-screen flex items-center justify-center">
+            {/* Vidéo en fond */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            >
+                <source src="/videos/mbappefailcomp.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+
+            {/* Superposition semi-transparente */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
+
+            {/* Contenu principal */}
+            <div className="relative z-20 bg-white shadow-md rounded-lg p-8 w-full max-w-md">
                 {/* Titre de la page */}
                 <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">
                     Créez un compte

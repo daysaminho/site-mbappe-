@@ -18,11 +18,12 @@ function Profile() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-8 w-96">
-        <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">Profil</h2>
-        <div className="mb-4">
-          <label htmlFor="username" className="block text-gray-700 font-semibold mb-2">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-200">
+      <div className="bg-white shadow-lg rounded-2xl p-8 w-96 max-w-md">
+        <h2 className="text-3xl font-bold text-indigo-600 mb-8 text-center">Modification du Profil</h2>
+
+        <div className="mb-6">
+          <label htmlFor="username" className="block text-gray-800 font-semibold mb-2 text-lg">
             Pseudo
           </label>
           <input
@@ -30,11 +31,12 @@ function Profile() {
             id="username"
             value={username}
             onChange={handleUsernameChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 ease-in-out"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="password" className="block text-gray-700 font-semibold mb-2">
+
+        <div className="mb-6">
+          <label htmlFor="password" className="block text-gray-800 font-semibold mb-2 text-lg">
             Mot de passe
           </label>
           <input
@@ -42,12 +44,13 @@ function Profile() {
             id="password"
             value={password}
             onChange={handlePasswordChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 ease-in-out"
           />
         </div>
+
         <button
           onClick={handleSave}
-          className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800 transition duration-200"
+          className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-all duration-300 ease-in-out"
         >
           Enregistrer
         </button>

@@ -13,9 +13,24 @@ function Freekick() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 via-blue-100 to-indigo-300 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-800 mb-6">Has Mbappé scored a free-kick?</h1>
-      <h2 className="text-2xl text-gray-700 mb-8">Nope. Day {daysSince}</h2>
+    <div className="relative min-h-screen flex items-center justify-center">
+      {/* Vidéo en fond */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/videos/mbappefreekick.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
+
+      {/* Contenu par-dessus la vidéo */}
+      <div className="relative z-10 bg-white bg-opacity-70 rounded-lg p-8 text-center shadow-lg">
+        <h1 className="text-4xl font-bold text-blue-800 mb-6">Has Mbappé scored a free-kick?</h1>
+        <h2 className="text-2xl text-gray-700">Nope. Day {daysSince}</h2>
+      </div>
     </div>
   );
 }
